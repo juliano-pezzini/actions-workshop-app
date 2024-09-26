@@ -19,3 +19,17 @@ jobs:
         run: npm install
       - name: Run tests
         run: npm test
+
+  parallel-job-1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run parallel job 1
+        run: echo "Running parallel job 1"
+
+  parallel-job-2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run parallel job 2
+        run: echo "Running parallel job 2"        
