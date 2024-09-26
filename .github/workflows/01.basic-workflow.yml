@@ -41,3 +41,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run sequential job
         run: echo "Running sequential job"        
+
+  reusable-workflow:
+    uses: ./.github/workflows/reusable-workflow.yml
+    with:
+      some-input: some-value        
